@@ -1,4 +1,5 @@
 ﻿using IOGateway.Enums;
+using IOGateway.Interfaces;
 using IOGateway.Models;
 using Newtonsoft.Json;
 using System.IO;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IOGateway
 {
-    public class IOClient
+    public class IOClient : IIOClient
     {
         readonly string baseAddress = "https://api.iogateway.cloud/";
         readonly string coreStatus = "api/Core/Status/";
